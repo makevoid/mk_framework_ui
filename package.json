@@ -1,0 +1,53 @@
+{
+  "name": "mkframe",
+  "version": "0.1.0",
+  "description": "JavaScript UI framework with Pug templates, keyed DOM diffing and a resource API layer",
+  "type": "module",
+  "license": "MIT",
+  "author": "Francesco Canessa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makevoid/mk_framework_ui.git"
+  },
+  "homepage": "https://github.com/makevoid/mk_framework_ui#readme",
+  "bugs": {
+    "url": "https://github.com/makevoid/mk_framework_ui/issues"
+  },
+  "keywords": [
+    "pug",
+    "ui",
+    "framework",
+    "dom",
+    "components",
+    "api"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./pug": "./lib/pug/index.js",
+    "./vite": "./lib/pug/vite.js"
+  },
+  "files": [
+    "lib/**/*.js"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {
+    "morphdom": "^2.7.7",
+    "pug": "^3.0.3",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.7"
+  }
+}

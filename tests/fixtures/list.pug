@@ -1,0 +1,11 @@
+section
+  h1= title
+  if notice
+    p.notice= notice
+  p.stable Always here
+  ul
+    each post in posts
+      li(data-post=post.id)
+        strong= post.title
+        input(aria-label='Note for ' + post.title)
+  button(data-click='increment')= count

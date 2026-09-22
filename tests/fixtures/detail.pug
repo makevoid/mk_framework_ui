@@ -1,0 +1,11 @@
+article
+  h1= post.title
+  p= post.description
+  form(data-key=post.id data-submit='save')
+    label(for='title-field') Title
+    input#title-field(value=post.title)
+  ul
+    each comment in comments
+      li(data-comment=comment.id)
+        strong= comment.author
+        p= comment.content
