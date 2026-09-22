@@ -1,5 +1,7 @@
 # MK Framework UI · MkFrame
 
+Note: This is Beta software. It works™ but it is still under development.
+
 A small JavaScript UI framework for apps written with Pug templates. Components
 render HTML and apply keyed DOM diffs through morphdom, preserving existing nodes,
 input values and focus. Includes lazy child components, hash routing and a JSON
