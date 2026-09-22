@@ -11,21 +11,14 @@ resource API layer for [MK Framework](https://github.com/makevoid/mk_framework)
 or other HTTP backends.
 
 ES modules, shipped as source. Node.js 20.19+ for development and template
-compilation; a modern browser for rendering. Status: alpha.
+compilation; a modern browser for rendering.
 
 ## Install
 
-The npm package name is `mkframe`. Once published to npm:
+Available on npm as [`mkframe`](https://www.npmjs.com/package/mkframe).
 
 ```sh
 npm install mkframe
-npm install --save-dev vite
-```
-
-Before the npm release, install directly from GitHub:
-
-```sh
-npm install github:makevoid/mk_framework_ui
 npm install --save-dev vite
 ```
 
@@ -278,5 +271,17 @@ npm pack --dry-run
 One Vitest suite runs in Node.js with jsdom, covering DOM identity, component
 lifecycle, lazy children, templates, routing, API transport and combined flows.
 The npm tarball contains only `lib/`, package metadata, this README and the MIT
-license. To release from an npm account authorized for `mkframe`, run
-`npm publish`; the specs run automatically before publication.
+license. Version `0.1.0` is published. For the next patch release, start with a
+clean Git working tree and an npm account authorized for `mkframe`:
+
+```sh
+npm login
+npm version patch
+npm publish
+git push origin main --follow-tags
+```
+
+Use `minor` or `major` instead of `patch` as appropriate for the changes.
+`npm version` updates the package version and creates a Git commit and tag.
+The specs run automatically before publication. Each release needs a new version;
+README changes appear on npm when included in a new published release.
