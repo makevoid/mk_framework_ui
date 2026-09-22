@@ -1,5 +1,7 @@
 # MK Framework UI · MkFrame
 
+#### A small JavaScript UI framework with DOM Diffing based off Pug templates.
+
 Note: This is Beta software. It works™ but it is still under development.
 
 A small JavaScript UI framework for apps written with Pug templates. Components
